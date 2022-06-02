@@ -62,11 +62,7 @@ function NavBar({ onToggleTheme }) {
 
   return (
     <header>
-      <AppBar
-        position="fixed"
-        color="transparent"
-        sx={{ backdropFilter: "blur(20px)" }}
-      >
+      <AppBar position="fixed">
         <Container>
           <Toolbar
             disableGutters
