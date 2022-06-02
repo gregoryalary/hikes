@@ -62,11 +62,17 @@ function NavBar({ onToggleTheme }) {
 
   return (
     <header>
-      <AppBar position="fixed">
+      <AppBar
+        position="fixed"
+        sx={{ background: theme.palette.background.default }}
+      >
         <Container>
           <Toolbar
             disableGutters
-            sx={{ display: "flex", justifyContent: "space-between" }}
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+            }}
           >
             <Stack direction="row" alignItems="center">
               <IconButton
