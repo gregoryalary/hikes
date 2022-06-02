@@ -48,7 +48,7 @@ function App() {
   );
 
   useEffect(() => {
-    document.body.style.background = `url(/background-${theme.palette.mode}.png)`;
+    document.body.style.background = `url(./background-${theme.palette.mode}.png)`;
   }, [theme]);
 
   return (
