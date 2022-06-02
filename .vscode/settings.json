@@ -1,0 +1,11 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "editor.detectIndentation": true,
+    "eslint.alwaysShowStatus": true,
+    "files.autoSave": "onFocusChange",
+    "eslint.workingDirectories": [
+        "./src"
+    ]
+}

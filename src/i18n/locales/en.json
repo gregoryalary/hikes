@@ -1,0 +1,13 @@
+{
+    "title": "My hikes",
+    "name": "Grégory Alary",
+    "day_one": "{{ count }} day",
+    "day_other": "{{ count }} days",
+    "download_gpx": "Download GPX",
+    "more_informations": "More informations",
+    "language": "Language",
+    "mode_dark": "Dark mode",
+    "mode_light": "Light mode",
+    "all_hikes": "All the hikes",
+    "fullscreen": "Full screen"
+}

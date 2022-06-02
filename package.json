@@ -1,0 +1,70 @@
+{
+  "name": "hikes",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://gregoryalary.github.io/hikes",
+  "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mapbox/togeojson": "^0.16.0",
+    "@mui/icons-material": "^5.8.0",
+    "@mui/material": "^5.8.0",
+    "@mui/system": "^5.8.1",
+    "@nivo/core": "^0.79.0",
+    "@nivo/line": "^0.79.1",
+    "@turf/distance": "^6.5.0",
+    "i18next": "^21.8.4",
+    "i18next-browser-languagedetector": "^6.1.4",
+    "lodash": "^4.17.21",
+    "mapbox-gl": "^2.8.2",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.0",
+    "react-country-flag": "^3.0.2",
+    "react-dom": "^17.0.0",
+    "react-full-screen": "^1.1.1",
+    "react-helmet": "^6.1.0",
+    "react-i18next": "^11.16.9",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "slugify": "^1.6.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@webpack-cli/generators": "^2.4.2",
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "gh-pages": "^4.0.0",
+    "prettier": "^2.6.2",
+    "webpack-cli": "^4.9.2"
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "title": "Mes randonnées",
+    "name": "Grégory Alary",
+    "day_one": "{{ count }} jour",
+    "day_other": "{{ count }} jours",
+    "download_gpx": "Télécharger le GPX",
+    "more_informations": "Plus d'information",
+    "language": "Langue",
+    "mode_dark": "Mode sombre",
+    "mode_light": "Mode clair",
+    "all_hikes": "Toutes les randonnées",
+    "fullscreen": "Plein écran"
+}
