@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/hikes/static/css/main.b36d2236.css",
-    "main.js": "/hikes/static/js/main.a6b06633.js",
+    "main.js": "/hikes/static/js/main.6513a57a.js",
     "index.html": "/hikes/index.html",
     "main.b36d2236.css.map": "/hikes/static/css/main.b36d2236.css.map",
-    "main.a6b06633.js.map": "/hikes/static/js/main.a6b06633.js.map"
+    "main.6513a57a.js.map": "/hikes/static/js/main.6513a57a.js.map"
   },
   "entrypoints": [
     "static/css/main.b36d2236.css",
-    "static/js/main.a6b06633.js"
+    "static/js/main.6513a57a.js"
   ]
 }
