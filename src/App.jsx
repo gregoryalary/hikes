@@ -6,7 +6,7 @@ import { Container } from "@mui/system";
 import { createTheme, ThemeProvider } from "@mui/material";
 
 // Router
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 
 // Helmet
 import { Helmet } from "react-helmet";
@@ -52,7 +52,7 @@ function App() {
   }, [theme]);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
       <Helmet>
         <title>
@@ -72,7 +72,7 @@ function App() {
           </Routes>
         </Container>
       </ThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
