@@ -12,7 +12,7 @@ import { OpenInFull as OpenInFullIcon } from "@mui/icons-material";
 
 // Mapbox
 // eslint-disable-next-line import/no-unresolved, import/order, import/no-webpack-loader-syntax
-import mapboxgl from "!mapbox-gl";
+import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 // Fullscreen
