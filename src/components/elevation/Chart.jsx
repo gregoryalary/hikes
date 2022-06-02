@@ -25,6 +25,10 @@ function ElevationChart({ elevations, onLatLngHover = () => undefined }) {
 
   const matchesMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
+  const matchesMobileLandscape = useMediaQuery(
+    "(max-device-height : 500px) and (orientation : landscape)"
+  );
+
   const [chartData, setChartData] = useState([]);
 
   useEffect(() => {
@@ -47,7 +51,12 @@ function ElevationChart({ elevations, onLatLngHover = () => undefined }) {
   }, [elevations]);
 
   return (
-    <Box sx={{ height: `${matchesMobile ? 150 : 200}px` }}>
+    <Box
+      sx={{
+        // eslint-disable-next-line no-nested-ternary
+        height: `${matchesMobileLandscape ? 100 : matchesMobile ? 150 : 200}px`,
+      }}
+    >
       <ResponsiveLine
         data={[
           {
