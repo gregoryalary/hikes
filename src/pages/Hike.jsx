@@ -75,7 +75,9 @@ function Hike() {
               <Stack direction="column" spacing={1} px={2}>
                 <Typography
                   component="h1"
-                  sx={{ fontSize: { xs: "1.2rem", md: "1.5rem", lg: "2rem" } }}
+                  sx={{
+                    fontSize: { xs: "1.2rem", md: "1.5rem", lg: "2rem" },
+                  }}
                 >
                   {hike.title[i18n.resolvedLanguage]}
                 </Typography>
