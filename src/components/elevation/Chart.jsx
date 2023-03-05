@@ -1,5 +1,5 @@
 // React
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 import PropTypes from "prop-types";
 
 // Material UI
@@ -17,7 +17,7 @@ import { throttle } from "lodash";
 import Tooltip from "./Tooltip";
 
 // Consts
-const MAX_POINT_PER_CHART = 250;
+const MAX_POINT_PER_CHART = 500;
 const TOOLTIP_REFRESH_RATE_MS = 1;
 
 function ElevationChart({ elevations, onLatLngHover = () => undefined }) {
@@ -29,12 +29,12 @@ function ElevationChart({ elevations, onLatLngHover = () => undefined }) {
     "(max-device-height : 500px) and (orientation : landscape)"
   );
 
-  const [chartData, setChartData] = useState([]);
-
-  useEffect(() => {
+  const chartData = useMemo(() => {
     if (elevations && elevations.length) {
       const dataBuildFromASubetOfElevations = [];
-      const delta = Math.floor(elevations.length / MAX_POINT_PER_CHART);
+      const delta = Math.floor(
+        elevations.length / Math.min(MAX_POINT_PER_CHART, elevations.length)
+      );
 
       for (let i = 0; i < elevations.length; i += delta) {
         dataBuildFromASubetOfElevations.push({
@@ -44,10 +44,10 @@ function ElevationChart({ elevations, onLatLngHover = () => undefined }) {
           ...elevations[i],
         });
       }
-      setChartData(dataBuildFromASubetOfElevations);
-    } else {
-      setChartData([]);
+      return dataBuildFromASubetOfElevations;
     }
+
+    return [];
   }, [elevations]);
 
   return (

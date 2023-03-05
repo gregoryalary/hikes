@@ -30,7 +30,6 @@ import {
   LightMode as LightModeIcon,
   Menu as MenuIcon,
   Translate as TranslateIcon,
-  Hiking as HikingIcon,
 } from "@mui/icons-material";
 import { useTheme } from "@mui/material/styles";
 
@@ -84,17 +83,13 @@ function NavBar({ onToggleTheme }) {
               </IconButton>
               <Link to="/" style={{ textDecoration: "none" }}>
                 <Stack direction="row" alignItems="center">
-                  <HikingIcon
-                    color="primary"
-                    sx={{ display: { xs: "none", md: "flex" } }}
-                  />
                   <Box
                     sx={{
                       display: "flex",
                       flexDirection: "column",
                       textDecoration: "none",
                       color: "primary",
-                      marginX: 2,
+                      marginRight: 2,
                     }}
                   >
                     <Typography
@@ -102,7 +97,7 @@ function NavBar({ onToggleTheme }) {
                       noWrap
                       color="primary"
                       sx={{
-                        fontFamily: "monospace",
+                        fontFamily: "Bungee Shade",
                         fontWeight: 700,
                         letterSpacing: ".1rem",
                         textDecoration: "none",
@@ -115,7 +110,7 @@ function NavBar({ onToggleTheme }) {
                       noWrap
                       color="primary"
                       sx={{
-                        fontFamily: "monospace",
+                        // fontFamily: "monospace",
                         textDecoration: "none",
                         fontSize: ".8rem",
                       }}

@@ -123,6 +123,7 @@ function HikeMap({ hike, displayElevation, fixed, allowFullScreen }) {
         center: startBounds.getCenter(),
         zoom: 1,
         interactive: !fixed,
+        attributionControl: false,
       });
 
       map.current.on("moveend", (e) => setCurrentBounds(e.target.getBounds()));

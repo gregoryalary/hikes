@@ -5,13 +5,19 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
 // Material UI
-import { Paper, Chip, Stack, Typography, Button, Divider } from "@mui/material";
+import {
+  Paper,
+  Chip,
+  Stack,
+  Typography,
+  Button,
+  Breadcrumbs,
+} from "@mui/material";
 import {
   DirectionsWalk as DirectionsWalkIcon,
   ArrowUpward as ArrowUpwardIcon,
   Download as DownloadIcon,
   Timelapse as TimelapseIcon,
-  ArrowBack as ArrowBackIcon,
 } from "@mui/icons-material/";
 
 // Helmet
@@ -63,19 +69,23 @@ function Hike() {
           </title>
         </Helmet>
         <Stack direction="column" spacing={2} alignItems="start">
-          <Paper elevation={1}>
+          <Breadcrumbs separator="›" aria-label="breadcrumb">
             <Link to="/" style={{ textDecoration: "none" }}>
-              <Button startIcon={<ArrowBackIcon />} color="secondary">
-                {t("all_hikes")}
-              </Button>
+              <Typography color="primary">{t("all_hikes")}</Typography>
             </Link>
-          </Paper>
+            <Typography color="text.disabled">
+              {hike.title[i18n.resolvedLanguage]}
+            </Typography>
+          </Breadcrumbs>
+
           <Paper elevation={4} sx={{ width: "100%" }}>
             <Stack direction="column" spacing={2} py={2}>
               <Stack direction="column" spacing={1} px={2}>
                 <Typography
                   component="h1"
-                  sx={{ fontSize: { xs: "1.2rem", md: "1.5rem", lg: "2rem" } }}
+                  sx={{
+                    fontSize: { xs: "1.2rem", md: "1.5rem", lg: "2rem" },
+                  }}
                 >
                   {hike.title[i18n.resolvedLanguage]}
                 </Typography>
@@ -114,7 +124,6 @@ function Hike() {
                 </Stack>
               </Stack>
               <HikeMap hike={hike} displayElevation allowFullScreen />
-              <Divider />
               <Stack direction="row" justifyContent="end" px={2}>
                 <Button
                   variant="outlined"

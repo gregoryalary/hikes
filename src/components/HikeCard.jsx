@@ -5,8 +5,6 @@ import PropTypes from "prop-types";
 import {
   Box,
   Button,
-  CardActions,
-  Divider,
   Stack,
   CardMedia,
   CardContent,
@@ -36,36 +34,36 @@ function HikeCard({ hike }) {
       <CardMedia>
         <Box sx={{ position: "relative" }} component="div">
           <HikeMap hike={hike} fixed />
-          {theme.palette.mode === "light" && <RandomWave fillColor="#fff" />}
+          <RandomWave
+            fillColor={theme.palette.mode === "light" ? "#fff" : "#2e2e2e"}
+          />
         </Box>
       </CardMedia>
-      <Box component={CardContent} sx={{ p: 2 }}>
-        <Typography
-          gutterBottom
-          variant="h5"
-          component="div"
-          mb={0}
-          sx={{
-            color: "text.primary",
-            fontSize: { xs: "1.2rem", md: "1.5rem" },
-          }}
-        >
-          {hike.title[i18n.resolvedLanguage]}
-        </Typography>
-      </Box>
-      <Divider />
-      <CardActions>
-        <Stack direction="row" justifyContent="end" sx={{ width: "100%" }}>
+      <CardContent sx={{ md: { paddingTop: "24px" } }}>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={2}>
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="div"
+            mb={0}
+            sx={{
+              color: "text.primary",
+              fontSize: { xs: "1.2rem", md: "1.5rem" },
+              flexGrow: 1,
+            }}
+          >
+            {hike.title[i18n.resolvedLanguage]}
+          </Typography>
           <Link
             to={{ pathname: `/${hike.id}` }}
-            style={{ textDecoration: "none" }}
+            style={{ textDecoration: "none", alignSelf: "flex-end" }}
           >
             <Button endIcon={<ArrowForwardIcon />} color="secondary">
               {t("more_informations")}
             </Button>
           </Link>
         </Stack>
-      </CardActions>
+      </CardContent>
     </Card>
   );
 }
