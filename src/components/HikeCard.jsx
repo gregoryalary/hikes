@@ -36,7 +36,9 @@ function HikeCard({ hike }) {
       <CardMedia>
         <Box sx={{ position: "relative" }} component="div">
           <HikeMap hike={hike} fixed />
-          {theme.palette.mode === "light" && <RandomWave fillColor="#fff" />}
+          <RandomWave
+            fillColor={theme.palette.mode === "light" ? "#fff" : "#2e2e2e"}
+          />
         </Box>
       </CardMedia>
       <Box component={CardContent} sx={{ p: 2 }}>
