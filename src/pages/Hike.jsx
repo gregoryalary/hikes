@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
 // Material UI
-import { Paper, Chip, Stack, Typography, Button, Divider } from "@mui/material";
+import { Paper, Chip, Stack, Typography, Button } from "@mui/material";
 import {
   DirectionsWalk as DirectionsWalkIcon,
   ArrowUpward as ArrowUpwardIcon,
@@ -114,7 +114,6 @@ function Hike() {
                 </Stack>
               </Stack>
               <HikeMap hike={hike} displayElevation allowFullScreen />
-              <Divider />
               <Stack direction="row" justifyContent="end" px={2}>
                 <Button
                   variant="outlined"
