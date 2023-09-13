@@ -25,9 +25,11 @@ function Listing() {
         </title>
       </Helmet>
       <Stack direction="column" spacing={{ xs: 4, md: 6 }}>
-        {withGeoJson(getHikes()).map((hike) => (
-          <HikeCard hike={hike} key={hike.id} />
-        ))}
+        {withGeoJson(getHikes())
+          .filter((hike) => !hike.hidden)
+          .map((hike) => (
+            <HikeCard hike={hike} key={hike.id} />
+          ))}
       </Stack>
     </>
   );
