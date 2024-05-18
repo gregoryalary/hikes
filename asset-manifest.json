@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "https://hikes.gregoryalary.dev/static/css/main.67aa7dd3.css",
-    "main.js": "https://hikes.gregoryalary.dev/static/js/main.3873bdec.js",
-    "index.html": "https://hikes.gregoryalary.dev/index.html",
-    "main.67aa7dd3.css.map": "https://hikes.gregoryalary.dev/static/css/main.67aa7dd3.css.map",
-    "main.3873bdec.js.map": "https://hikes.gregoryalary.dev/static/js/main.3873bdec.js.map"
+    "main.css": "/static/css/main.67aa7dd3.css",
+    "main.js": "/static/js/main.cd442b41.js",
+    "index.html": "/index.html",
+    "main.67aa7dd3.css.map": "/static/css/main.67aa7dd3.css.map",
+    "main.cd442b41.js.map": "/static/js/main.cd442b41.js.map"
   },
   "entrypoints": [
     "static/css/main.67aa7dd3.css",
-    "static/js/main.3873bdec.js"
+    "static/js/main.cd442b41.js"
   ]
 }
